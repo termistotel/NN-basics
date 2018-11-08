@@ -1,6 +1,9 @@
 import numpy as np
 
-def simpleRandomInit(arh):
+def simpleRandomInit(arh, seed=None):
+	# Seed if provided
+	np.random.seed(seed)
+
 	# Random initialization
 	ws, bs=[],[]
 	for i in range(1,len(arh)):

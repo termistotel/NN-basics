@@ -21,8 +21,25 @@ def getIris():
 		returnx = np.append(returnx, returnx, axis=1)
 		returny = np.append(returny, returny, axis=1)
 
+	returnx, returny = shuffleData(returnx, returny)
+
 	return returnx, returny
 
+def shuffleData(X, Y, seed=None):
+	np.random.seed(1337)
+	a = np.arange(Y.shape[1])
+	np.random.shuffle(a)
+
+	return X[:, a], Y[:, a]
+
 if __name__ == "__main__":
-	Y = getIris()[1]
-	print(Y.shape)
+	Y = getIris()[0]
+	a = np.arange(Y.shape[1])
+	np.random.shuffle(a)
+
+	print(Y[:,a[:3]])
+	Y = Y[:, a]
+
+	print(Y[:,:3])
+	print(Y[:,a[:3]])
+	print(a)
