@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
 	# Neural net initialization
 	seed = random.randint(0, 2**32)
-	seed = 1337
+	seed = None
 	niter = 50
 	forwardprop = simpleForwardProp
 	gradient = simpleGrad
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 	hparameters = {"alpha": 0.008,
 				"betav": 0.9,
 				"betas": 0.999,
-				"epsilon": 0.0001,
+				"epsilon": 0.00000001,
 				"lambda": 10,
 				"batch_size": 512}
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 	hparameters = {"alpha": 0.0057,
 				"betav": 0.9,
 				"betas": 0.999,
-				"epsilon": 0.001,
+				"epsilon": 0.00000001,
 				"lambda": 10,
 				"batch_size": 512}
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
 	hparameters = {"alpha": 0.1048,
 				"betav": 0.9,
 				"betas": 0.999,
-				"epsilon": 0.001,
+				"epsilon": 0.00000001,
 				"lambda": 10,
 				"batch_size": 512}
 
