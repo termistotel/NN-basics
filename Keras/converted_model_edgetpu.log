@@ -1,0 +1,9 @@
+Edge TPU Compiler version 1.0.249710469
+Input: converted_model.tflite
+Output: converted_model_edgetpu.tflite
+
+Operator                       Count      Status
+
+SOFTMAX                        1          Mapped to Edge TPU
+FULLY_CONNECTED                2          Mapped to Edge TPU
+QUANTIZE                       2          Mapped to Edge TPU
